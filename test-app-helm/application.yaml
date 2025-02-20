@@ -7,9 +7,9 @@ spec:
   project: default
 
   source:
-    repoURL: https://gitlab.com/nanuchi/argocd-app-config.git
-    targetRevision: HEAD
-    path: dev
+    repoURL: https://github.com/danielticu/helm-test.git
+    targetRevision: argocd-init
+    path: test-app/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: test-app
