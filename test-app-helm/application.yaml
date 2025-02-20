@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-app-argo-application
+  namespace: default
+spec:
+  project: default
+
+  source:
+    repoURL: https://github.com/danielticu/helm-test.git
+    targetRevision: argocd-init
+    path: test-app/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: test-app
+
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+
+    automated:
+      selfHeal: true
+      prune: true
