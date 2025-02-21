@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://danielticu.github.io/helm-test/
     chart: test-app-helm
-    targetRevision: "0.1.0"
+    targetRevision: "0.2.0"
 
   destination:
     server: https://kubernetes.default.svc
