@@ -1,18 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: test-app-argo-application
+  name: test-app-helm
   namespace: default
 spec:
   project: default
 
   source:
-    repoURL: https://github.com/danielticu/helm-test.git
-    targetRevision: argocd-init
-    path: test-app/dev
+    repoURL: https://danielticu.github.io/helm-test/
+    chart: test-app-helm
+    targetRevision: "0.1.0"
+
   destination:
     server: https://kubernetes.default.svc
-    namespace: test-app
+    namespace: test-app-helm
 
   syncPolicy:
     syncOptions:
