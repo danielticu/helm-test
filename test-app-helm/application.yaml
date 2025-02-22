@@ -7,9 +7,11 @@ spec:
   project: default
 
   source:
-    repoURL: https://danielticu.github.io/helm-test/
-    chart: test-app-helm
-    targetRevision: "0.3.0"
+    repoURL: https://github.com/danielticu/helm-test.git
+    path: test-app-helm
+    targetRevision: HEAD
+    helm:
+      releaseName: test-app-helm
 
   destination:
     server: https://kubernetes.default.svc
