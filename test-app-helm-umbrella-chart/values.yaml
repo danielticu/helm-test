@@ -1,5 +1,5 @@
 # Specific values for test-app-helm-umbrella-chart.
-app:
+test-app-helm-umbrella-chart:
   replicaCount: 2
 #
 #  image:
