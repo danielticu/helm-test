@@ -1,6 +1,6 @@
 # Specific values for test-app-helm-umbrella-chart.
-#app:
-#  replicaCount: 2
+app:
+  replicaCount: 2
 #
 #  image:
 #    repository: nginx
