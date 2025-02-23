@@ -8,5 +8,5 @@ dependencies:
   - name: umbrella-chart
 #    alias: ""
     version: 1.0.0
-    repository: https://github.com/danielticu/helm-test/umbrella-chart
+    repository: https://danielticu.github.io/helm-umbrella-chart/
 
