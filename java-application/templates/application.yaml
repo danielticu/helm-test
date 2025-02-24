@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/danielticu/helm-test.git
     targetRevision: HEAD
-    path: my-argocd-apps
+    path: java-application
     helm:
       valueFiles:
         - "applications/{{ .Values.appName }}/values.yaml"

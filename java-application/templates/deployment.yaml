@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "my-argocd-apps.fullname" . }}
+  name: {{ include "java-application.fullname" . }}
   namespace: {{ .Values.namespace }}
   labels:
-    {{- include "my-argocd-apps.labels" . | nindent 4 }}
+    {{- include "java-application.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "my-argocd-apps.selectorLabels" . | nindent 6 }}
+      {{- include "java-application.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -19,13 +19,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "my-argocd-apps.selectorLabels" . | nindent 8 }}
+        {{- include "java-application.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "my-argocd-apps.serviceAccountName" . }}
+      serviceAccountName: {{ include "java-application.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:

@@ -1,4 +1,4 @@
-# Default values for my-argocd-apps.
+# Default values for java-application.
 
 namespace: default
 replicaCount: 1

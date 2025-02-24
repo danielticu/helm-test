@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "my-argocd-apps.name" -}}
+{{- define "java-application.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "my-argocd-apps.fullname" -}}
+{{- define "java-application.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "my-argocd-apps.chart" -}}
+{{- define "java-application.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "my-argocd-apps.labels" -}}
-helm.sh/chart: {{ include "my-argocd-apps.chart" . }}
-{{ include "my-argocd-apps.selectorLabels" . }}
+{{- define "java-application.labels" -}}
+helm.sh/chart: {{ include "java-application.chart" . }}
+{{ include "java-application.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "my-argocd-apps.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "my-argocd-apps.name" . }}
+{{- define "java-application.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "java-application.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "my-argocd-apps.serviceAccountName" -}}
+{{- define "java-application.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "my-argocd-apps.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "java-application.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
