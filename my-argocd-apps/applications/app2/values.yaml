@@ -1,5 +1,4 @@
 appName: app2
 namespace: default
-image: busybox:latest
+image: nginx:latest
 replicaCount: 3
-command: ["/bin/sh", "-c", "sleep infinity"]
