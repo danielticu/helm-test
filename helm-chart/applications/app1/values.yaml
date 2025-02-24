@@ -1,6 +1,3 @@
 appName: app1
-repoURL: https://github.com/danielticu/helm-test.git
-targetRevision: HEAD
-path: helm-chart
 namespace: default
 image: nginx:latest
