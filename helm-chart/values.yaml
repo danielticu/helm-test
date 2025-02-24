@@ -3,6 +3,8 @@ global:
   targetRevision: HEAD
   destinationServer: https://kubernetes.default.svc
 
+appName: my-argocd-apps
+
 #service:
 #  port: 80
 #
