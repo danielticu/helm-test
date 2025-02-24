@@ -11,8 +11,8 @@ spec:
     path: java-application
     helm:
       valueFiles:
-        - "applications/{{ .Values.appName }}/values.yaml"
         - "applications/default-values.yaml"
+        - "applications/{{ .Values.appName }}/values.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.namespace }}
