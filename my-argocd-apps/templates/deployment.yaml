@@ -16,5 +16,6 @@ spec:
       containers:
         - name: {{ .Values.appName }}
           image: {{ .Values.image }}
+          command: ["/bin/sh", "-c", "sleep infinity"]
           ports:
             - containerPort: 80
