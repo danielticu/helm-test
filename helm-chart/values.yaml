@@ -6,3 +6,5 @@ global:
 appName: my-argocd-apps
 
 image: nginx:latest
+
+namespace: default
