@@ -4,3 +4,4 @@ image: nginx:latest
 repoURL: https://github.com/danielticu/helm-test.git
 targetRevision: HEAD
 path: helm-chart/applications/app1
+replicaCount: 2
