@@ -9,6 +9,9 @@ spec:
     repoURL: {{ .Values.repoURL }}
     targetRevision: {{ .Values.targetRevision }}
     path: {{ .Values.path }}
+    helm:
+      values: |-
+        {{ .Files.Get "helm-chart/applications/app1/values.yaml" | indent 4 }}
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.namespace }}
