@@ -1,0 +1,4 @@
+appName: app2
+namespace: default
+image: nginx:latest
+replicaCount: 3
