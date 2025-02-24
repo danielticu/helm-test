@@ -1,4 +1,4 @@
 appName: app2
 namespace: default
-image: busybox:latest
+image: hello-world:nanoserver-ltsc2022
 replicaCount: 3
