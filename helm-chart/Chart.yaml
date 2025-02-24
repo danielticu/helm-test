@@ -1,6 +1,6 @@
 apiVersion: v2
-name: test-app-helm
-description: A Helm chart for Kubernetes
+name: my-argocd-apps
+description: A Helm chart to deploy multiple ArgoCD applications
 type: application
 version: 0.1.0
-appVersion: "1.16.0"
+appVersion: "1.0"
