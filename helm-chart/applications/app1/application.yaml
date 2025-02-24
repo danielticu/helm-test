@@ -1,0 +1,5 @@
+appName: app1
+repoURL: https://github.com/example/repo.git
+targetRevision: main
+path: app1
+namespace: app1-namespace
