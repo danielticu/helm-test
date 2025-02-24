@@ -1,3 +1,2 @@
 appName: app1
-image: nginx:latest
-replicaCount: 2
+
