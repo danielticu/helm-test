@@ -2,3 +2,4 @@ appName: app2
 namespace: default
 image: busybox:latest
 replicaCount: 3
+command: ["/bin/sh", "-c", "sleep infinity"]
