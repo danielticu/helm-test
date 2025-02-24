@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "java-application.fullname" . }}
+  name: {{ include "java-application.name" . }}
   namespace: {{ .Values.namespace }}
   labels:
     {{- include "java-application.labels" . | nindent 4 }}
