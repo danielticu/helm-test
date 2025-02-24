@@ -1,5 +1,5 @@
-#appName: app1
-##repoURL: https://github.com/danielticu/helm-test.git
-##targetRevision: HEAD
-##path: helm-chart/applications/app1
-#namespace: default
+appName: app1
+repoURL: https://github.com/danielticu/helm-test.git
+targetRevision: HEAD
+path: helm-chart/applications/app1
+namespace: default
