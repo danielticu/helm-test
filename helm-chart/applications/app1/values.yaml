@@ -1,3 +1,6 @@
-#appName: app1
-#namespace: default
-#image: nginx:latest
+appName: app1
+namespace: default
+image: nginx:latest
+repoURL: https://github.com/danielticu/helm-test.git
+targetRevision: HEAD
+path: helm-chart/applications/app1
