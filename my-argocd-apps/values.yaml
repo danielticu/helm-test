@@ -1,4 +1,0 @@
-appName: my-argocd-apps
-image: nginx:latest
-namespace: default
-replicaCount: 1
