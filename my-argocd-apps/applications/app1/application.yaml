@@ -1,5 +1,2 @@
 appName: app1
-repoURL: https://github.com/danielticu/helm-test.git
-targetRevision: HEAD
-path: my-argocd-apps
 namespace: default
