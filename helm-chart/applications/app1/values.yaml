@@ -1,10 +1,6 @@
 appName: app1
-namespace: default
-image: nginx:latest
 repoURL: https://github.com/danielticu/helm-test.git
 targetRevision: HEAD
 path: helm-chart
-#service:
-#  port: 80
-#  type: ClusterIP
-
+namespace: default
+image: nginx:latest
