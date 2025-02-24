@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: {{ .Values.repoURL }}
+    repoURL: {{ .Values.repoURL | default "https://github.com/danielticu/helm-test.git" }}
     targetRevision: {{ .Values.targetRevision | default "HEAD" }}
     path: {{ .Values.path }}
     helm:
