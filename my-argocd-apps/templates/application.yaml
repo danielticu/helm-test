@@ -8,10 +8,10 @@ spec:
   source:
     repoURL: https://github.com/danielticu/helm-test.git
     targetRevision: HEAD
-    path: "helm-chart/applications/{{ .Values.appName }}"
+    path: "my-argocd-apps/applications/{{ .Values.appName }}"
     helm:
       valueFiles:
-        - "helm-chart/applications/{{ .Values.appName }}/values.yaml"
+        - "my-argocd-apps/applications/{{ .Values.appName }}/values.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.namespace }}

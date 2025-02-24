@@ -2,4 +2,4 @@ appName: app1
 namespace: default
 image: nginx:latest
 replicaCount: 2
-valuesFile: "helm-chart/applications/app1/values.yaml"
+valuesFile: "my-argocd-apps/applications/app1/values.yaml"
