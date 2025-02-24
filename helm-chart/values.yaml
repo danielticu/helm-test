@@ -1,6 +1,7 @@
 global:
   repoURL: https://github.com/danielticu/helm-test.git
   targetRevision: HEAD
+  path: helm-chart
   destinationServer: https://kubernetes.default.svc
 
 appName: my-argocd-apps
