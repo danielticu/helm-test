@@ -1,7 +1,3 @@
-repoURL: https://github.com/danielticu/helm-test.git
-targetRevision: HEAD
-path: helm-chart
-
 appName: my-argocd-apps
 image: nginx:latest
 namespace: default

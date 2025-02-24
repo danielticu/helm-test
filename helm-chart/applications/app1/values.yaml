@@ -1,7 +1,5 @@
 appName: app1
 namespace: default
 image: nginx:latest
-repoURL: https://github.com/danielticu/helm-test.git
-targetRevision: HEAD
-path: helm-chart/applications/app1
 replicaCount: 2
+valuesFile: "helm-chart/applications/app1/values.yaml"

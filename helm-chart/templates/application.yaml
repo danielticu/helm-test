@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: {{ .Values.repoURL }}
-    targetRevision: {{ .Values.targetRevision }}
-    path: {{ .Values.path }}
+    repoURL: https://github.com/danielticu/helm-test.git
+    targetRevision: HEAD
+    path: "helm-chart/applications/{{ .Release.Name }}"
     helm:
-      values: |-
-        {{ .Files.Get "helm-chart/applications/app1/values.yaml" | indent 4 }}
+      valueFiles:
+        - "helm-chart/applications/{{ .Release.Name }}/values.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.namespace }}
