@@ -1,2 +1,11 @@
 appName: app1
 
+autoscaling:
+  enabled: true
+
+serviceAccount:
+  create: true
+
+service:
+  type: LoadBalancer
+  port: 8080
