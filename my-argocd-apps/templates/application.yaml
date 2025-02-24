@@ -11,7 +11,7 @@ spec:
     path: my-argocd-apps
     helm:
       valueFiles:
-        - "my-argocd-apps/applications/{{ .Values.appName }}/values.yaml"
+        - "applications/{{ .Values.appName }}/values.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.namespace }}
