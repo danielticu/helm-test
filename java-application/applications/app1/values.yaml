@@ -2,3 +2,7 @@ appName: app1
 
 serviceAccount:
   create: true
+
+service:
+  type: LoadBalancer
+  port: 8080
