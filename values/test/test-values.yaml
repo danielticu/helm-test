@@ -1,2 +1,3 @@
-replicaCount: 2
-environment: environment
+environment: test
+
+replicaCount: 3
