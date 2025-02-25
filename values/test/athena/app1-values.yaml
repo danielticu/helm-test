@@ -1,4 +1,6 @@
 appName: app1
+environment: test
+namespace: athena
 
 serviceAccount:
   create: true
