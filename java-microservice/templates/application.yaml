@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/danielticu/helm-test.git
-    targetRevision: HEAD
+    targetRevision: test-branch
     path: java-microservice
     helm:
       valueFiles:
