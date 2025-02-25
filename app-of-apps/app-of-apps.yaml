@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/danielticu/helm-test.git
     targetRevision: HEAD
-    path: app-of-apps  # A directory containing application manifests
+    path: applications  # A directory containing application manifests
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
