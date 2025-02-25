@@ -3,4 +3,4 @@ appName: app1
 serviceAccount:
   create: true
 
-replicaCount: 1
+replicaCount: 2
