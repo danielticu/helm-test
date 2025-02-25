@@ -16,7 +16,6 @@ spec:
     automated:
       prune: true
       selfHeal: true
-    preserveResourcesOnDeletion: true
   ignoreDifferences:
     - group: argoproj.io
       kind: Application
