@@ -1,4 +1,7 @@
 appName: app2
+environment: test
+namespace: athena
+
 image:
   repository: nginx
   pullPolicy: IfNotPresent
