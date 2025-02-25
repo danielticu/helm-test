@@ -1,4 +1,4 @@
-# Default values for java-application.
+# Default values for java-microservice.
 
 namespace: default
 replicaCount: 1

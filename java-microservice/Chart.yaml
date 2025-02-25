@@ -1,5 +1,5 @@
 apiVersion: v2
-name: java-application
+name: java-microservice
 description: A Helm chart to deploy multiple ArgoCD applications
 type: application
 version: 0.1.0

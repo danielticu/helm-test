@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/danielticu/helm-test.git
     targetRevision: HEAD
-    path: java-application
+    path: java-microservice
     helm:
       valueFiles:
         - "applications/default-values.yaml"

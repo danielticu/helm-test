@@ -4,14 +4,14 @@ metadata:
   name: {{ .Values.appName }}
   namespace: {{ .Values.namespace }}
   labels:
-    {{- include "java-application.labels" . | nindent 4 }}
+    {{- include "java-microservice.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "java-application.selectorLabels" . | nindent 6 }}
+      {{- include "java-microservice.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -19,7 +19,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "java-application.selectorLabels" . | nindent 8 }}
+        {{- include "java-microservice.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
