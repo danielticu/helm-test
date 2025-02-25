@@ -4,4 +4,4 @@ Application installation template:
 
 Example:
 
-`helm upgrade --install app2 java-microservice -f values/default-values.yaml -f values/test/test-values.yaml -f values/test/athena/athena-values.yaml -f values/test/athena/app2-values.yaml`
+`helm upgrade --install app1 java-microservice -f values/default-values.yaml -f values/test/test-values.yaml -f values/test/athena/athena-values.yaml -f values/test/athena/app1-values.yaml`
