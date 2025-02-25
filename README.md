@@ -1,5 +1,6 @@
 ## Repository Structure
 
+```plaintext
 .
 ├── README.md
 ├── charts
@@ -22,6 +23,7 @@
             ├── defaults.yaml # namespace defaults
             └── app_name.yaml # app specific values   
 ```
+
 
 Application installation template:
 
