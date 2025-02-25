@@ -1,2 +1,2 @@
 replicaCount: 2
-environment: test
+environment: environment
