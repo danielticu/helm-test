@@ -11,8 +11,10 @@ spec:
     path: java-microservice
     helm:
       valueFiles:
-        - "applications/default-values.yaml"
-        - "applications/{{ .Values.appName }}-values.yaml"
+        - "../values/default-values.yaml"
+        - "../values/environment/environment-values.yaml"
+        - "../values/environment/namespace/namespace-values.yaml"
+        - "../values/environment/namespace/{{ .Values.appName }}-values.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.namespace }}
