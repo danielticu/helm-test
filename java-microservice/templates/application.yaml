@@ -12,9 +12,9 @@ spec:
     helm:
       valueFiles:
         - "../values/default-values.yaml"
-        - "../values/environment/environment-values.yaml"
-        - "../values/environment/namespace/namespace-values.yaml"
-        - "../values/environment/namespace/{{ .Values.appName }}-values.yaml"
+        - "../values/{{ .Values.environment }}/{{ .Values.environment }}-values.yaml"
+        - "../values/{{ .Values.environment }}/{{ .Values.namespace }}/{{ .Values.namespace }}-values.yaml"
+        - "../values/{{ .Values.environment }}/{{ .Values.namespace }}/{{ .Values.appName }}-values.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: {{ .Values.namespace }}
