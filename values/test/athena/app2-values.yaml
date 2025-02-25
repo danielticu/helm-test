@@ -1,6 +1,4 @@
 appName: app2
-environment: test
-namespace: athena
 
 image:
   repository: nginx
@@ -9,3 +7,6 @@ image:
   tag: "1.27.4"
 
 replicaCount: 5
+
+
+#helm upgrade --install app2 java-microservice -f java-microservice/values.yaml -f values/default-values.yaml -f values/test/test-values.yaml -f values/test/athena/athena-values.yaml -f values/test/athena/app2-values.yaml
