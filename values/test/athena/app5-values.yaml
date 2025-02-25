@@ -6,4 +6,4 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1.27.4"
 
-replicaCount: 1
+replicaCount: 2
