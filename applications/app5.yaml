@@ -14,7 +14,7 @@ spec:
         - "../values/default-values.yaml"
         - "../values/test/test-values.yaml"
         - "../values/test/athena/athena-values.yaml"
-        - "../values/test/athena/app4-values.yaml"
+        - "../values/test/athena/app5-values.yaml"
   destination:
     server: https://kubernetes.default.svc
     namespace: default
