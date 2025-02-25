@@ -1,0 +1,9 @@
+appName: app4
+
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "1.27.4"
+
+replicaCount: 1
