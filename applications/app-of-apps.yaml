@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/danielticu/helm-test.git
     targetRevision: HEAD
-    path: java-microservice/templates/application.yaml  # A directory containing application manifests
+    path: java-microservice/templates  # A directory containing application manifests
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
