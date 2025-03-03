@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: app1
+  namespace: argo-rollouts
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: app6-rollout
+  template:
+    metadata:
+      labels:
+        app: app6-rollout
+    spec:
+      containers:
+        - name: app6-rollout
+          image: nginx:latest  # Ensure this is updated by ArgoCD
+          ports:
+            - containerPort: 80
+  strategy:
+    blueGreen:
+      activeService: app6-rollout-active  # Service pointing to the currently running version
+      previewService: app6-rollout-preview  # Service pointing to the new version for testing
+      autoPromotionEnabled: false   # Set to true for automatic cutover
