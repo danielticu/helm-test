@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: app6-rollout
-          image: nginx:latest  # Ensure this is updated by ArgoCD
+          image: nginx:1.16.0  # Ensure this is updated by ArgoCD
           ports:
             - containerPort: 80
   strategy:
