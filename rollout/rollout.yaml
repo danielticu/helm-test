@@ -22,4 +22,4 @@ spec:
     blueGreen:
       activeService: app6-rollout-active  # Service pointing to the currently running version
       previewService: app6-rollout-preview  # Service pointing to the new version for testing
-      autoPromotionEnabled: false   # Set to true for automatic cutover
+      autoPromotionEnabled: true   # Set to true for automatic cutover
