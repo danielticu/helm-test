@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app6-rollout-preview
+  namespace: default
+spec:
+  selector:
+    app: app6-rollout  # Will dynamically switch to the preview version
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
